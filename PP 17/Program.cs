@@ -158,27 +158,27 @@ namespace PP_17
             }
             return arr;
         }
-        public static HashSet<Fabric> GetFabricsStart(HashSet<Fabric> set)
-        {
-            string[] colors = { "зеленый", "красный", "фиолетовый", "розовый", "зеленый", "оранжевый", "голубой" };
-            for (int i = 0; i < 10; i++)
-            {
-                Fabric fabric = new Fabric(colors[rand.Next(7)], rand.Next(10, 100));
-                set.Add(fabric);
-            }
-            return set;
-        }
-        //public static HashSet<Fabric> GetFabrics(HashSet<Fabric> set)
+        //public static HashSet<Fabric> GetFabricsStart(HashSet<Fabric> set)
         //{
-        //
-        //    Fabric fabric = new Fabric(InputFromPYStr("Введите цвет"), InputFromPYDouble("Введите длину"));
-
+        //    string[] colors = { "зеленый", "красный", "фиолетовый", "розовый", "зеленый", "оранжевый", "голубой" };
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Fabric fabric = new Fabric(colors[rand.Next(7)], rand.Next(10, 100));
+        //        set.Add(fabric);
+        //    }
+        //    return set;
         //}
+        public static Fabric GetFabric()
+        {
+
+            Fabric fabric = new Fabric(InputFromPYStr("Введите цвет"), InputFromPYDouble("Введите длину"));
+            return fabric;
+        }
         static void Main(string[] args)
         {
             ArrayList numberList = new ArrayList();
             List<Hero> heros = new List<Hero>();
-            HashSet<Fabric> fabrics = new HashSet<Fabric>();
+            Dictionary<Fabric> fabrics = new Dictionary<Fabric>();
             fabrics = GetFabricsStart(fabrics);
             while (true)
             {
