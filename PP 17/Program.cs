@@ -170,7 +170,7 @@ namespace PP_17
         }
         //public static HashSet<Fabric> GetFabrics(HashSet<Fabric> set)
         //{
-
+        //
         //    Fabric fabric = new Fabric(InputFromPYStr("Введите цвет"), InputFromPYDouble("Введите длину"));
 
         //}
